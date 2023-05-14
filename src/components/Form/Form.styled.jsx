@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
+import { Form, Field, ErrorMessage } from 'formik';
 
-export const Form = styled.form`
+export const FormikForm = styled(Form)`
   display: flex;
   gap: 40px;
 `;
@@ -8,18 +9,22 @@ export const Form = styled.form`
 export const Label = styled.label`
   font-weight: 700;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: baseline;
+  gap: 40px;
+  padding: 40px;
 
   filter: drop-shadow(0px 0px 20px #a201ff);
 `;
 
-export const Input = styled.input`
+export const FormikInput = styled(Field)`
   display: block;
 
   font-size: 20px;
   font-weight: 700;
   margin: auto;
-  color: purple;
+  color: #00ffff;
   background-color: transparent;
   outline: 1px solid aqua;
 
@@ -66,4 +71,11 @@ export const Button = styled.button`
       text-shadow: none;
     }
   }
+`;
+
+export const Error = styled(ErrorMessage)`
+  position: absolute;
+  top: 100%;
+  filter: drop-shadow(0px 0px 20px red);
+  color: red;
 `;
