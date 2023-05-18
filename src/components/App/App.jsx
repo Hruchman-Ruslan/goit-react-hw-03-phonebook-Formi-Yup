@@ -21,7 +21,7 @@ export class App extends Component {
 
     if (savedContacts !== null) {
       const parsedContacts = JSON.parse(savedContacts);
-      this.setState({ conntacts: parsedContacts });
+      this.setState({ contacts: parsedContacts });
       return;
     }
     this.setState({ contacts: contactDefault });
